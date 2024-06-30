@@ -6,7 +6,7 @@
 /*   By: artucn <artucn@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/29 16:35:18 by artucn            #+#    #+#             */
-/*   Updated: 2024/06/29 17:17:06 by artucn           ###   ########.fr       */
+/*   Updated: 2024/06/30 18:08:03 by artucn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,21 @@ void Phone_book::add()
 }
 
 
-/*void Phone_book::search()
+void Phone_book::search()
 {
-    cout>>"index     |first name|last name |nickname  |number    |";
-    <<endl;
-}*/
+    std::cout<<"index     |first name|last name |nickname  |number    |\n";
+    for (int i = 0; i < num; i++)
+    {
+        std::cout << contacts[i].idx << "\t\t|";
+        std::cout << contacts[i].getFirstName() << "         |";
+        std::cout << contacts[i].getLastName() << "         |";
+        std::cout << contacts[i].getNickname() << "         |";
+        std::cout << contacts[i].getNumber() << "         |";
+        std::cout << std::endl;
+    }
+}
+
+void Phone_book::exit()
+{
+    std::cout << "Exit" << std::endl;
+}
