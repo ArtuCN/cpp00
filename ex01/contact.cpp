@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: artucn <artucn@student.42.fr>              +#+  +:+       +#+        */
+/*   By: aconti <aconti@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/29 16:14:57 by artucn            #+#    #+#             */
-/*   Updated: 2024/06/30 18:10:07 by artucn           ###   ########.fr       */
+/*   Updated: 2024/07/01 14:24:37 by aconti           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,4 +56,9 @@ std::string Contact::getNickname() const
 std::string Contact::getNumber() const
 {
     return (this->number);
+}
+
+std::uint8_t Contact::getIndex() const
+{
+    return (this->idx);
 }

@@ -23,7 +23,7 @@ class Contact
 		std::string getLastName() const;
 		std::string getNickname() const;
 		std::string getNumber() const;
-
+		std::uint8_t getIndex() const;
 		uint8_t idx;
 };
 

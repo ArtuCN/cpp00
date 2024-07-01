@@ -4,6 +4,7 @@
 # include <iostream>
 # include <stdint.h>
 # include <string>
+# include <iomanip>
 # include "contact.hpp"
 
 # define LIMIT 8
@@ -17,7 +18,8 @@ class Phone_book
         void exit();
     private:
         Contact contacts[LIMIT];
-        int num;
+        static std::string truncateName(const std::string& name);
+        uint8_t num;
 };
 
 #endif
