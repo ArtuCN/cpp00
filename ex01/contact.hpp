@@ -17,14 +17,14 @@ class Contact
 		void setLastName(const std::string lastName);
 		void setNickname(const std::string nickname);
 		void setNumber(const std::string number);
-		void setIndex(const uint8_t idx);
+		void setIndex(const int idx);
 
 		std::string getFirstName() const;
 		std::string getLastName() const;
 		std::string getNickname() const;
 		std::string getNumber() const;
-		std::uint8_t getIndex() const;
-		uint8_t idx;
+		int getIndex() const;
+		int idx;
 };
 
 # endif

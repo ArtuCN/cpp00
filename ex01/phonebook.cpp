@@ -6,7 +6,7 @@
 /*   By: aconti <aconti@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/29 16:35:18 by artucn            #+#    #+#             */
-/*   Updated: 2024/07/01 15:46:30 by aconti           ###   ########.fr       */
+/*   Updated: 2024/07/05 11:29:43 by aconti           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void Phone_book::add()
         std::cin >> number;
         contacts[flag].setNumber(truncateName(number));
 
-        contacts[flag].setIndex(((uint8_t)flag));
+        contacts[flag].setIndex(flag);
         if (flag == LIMIT - 1)
             flag = -1;
     }
