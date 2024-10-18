@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: artucn <artucn@student.42.fr>              +#+  +:+       +#+        */
+/*   By: aconti <aconti@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/29 17:16:51 by artucn            #+#    #+#             */
-/*   Updated: 2024/06/30 18:05:19 by artucn           ###   ########.fr       */
+/*   Updated: 2024/10/18 11:34:39 by aconti           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ int main()
         }
         else
             std::cout << "Invalid command" << std::endl;
+        std::cin.clear();
     }
     return (0);
 }

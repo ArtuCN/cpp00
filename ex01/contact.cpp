@@ -6,7 +6,7 @@
 /*   By: aconti <aconti@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/29 16:14:57 by artucn            #+#    #+#             */
-/*   Updated: 2024/07/05 11:28:28 by aconti           ###   ########.fr       */
+/*   Updated: 2024/10/18 11:30:13 by aconti           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,22 +15,22 @@
 
 void Contact::setFirstName(const std::string firstName)
 {
-    this->firstName = firstName;
+    this->_firstName = firstName;
 }
 
 void Contact::setLastName(const std::string lastName)
 {
-    this->lastName = lastName;
+    this->_lastName = lastName;
 }
 
 void Contact::setNickname(const std::string nickname)
 {
-    this->nickname = nickname;
+    this->_nickname = nickname;
 }
 
 void Contact::setNumber(const std::string number)
 {
-    this->number = number;
+    this->_number = number;
 }
 
 void Contact::setIndex(const int idx)
@@ -40,22 +40,22 @@ void Contact::setIndex(const int idx)
 
 std::string Contact::getFirstName() const
 {
-    return (this->firstName);
+    return (this->_firstName);
 }
 
 std::string Contact::getLastName() const
 {
-    return (this->lastName);
+    return (this->_lastName);
 }
 
 std::string Contact::getNickname() const
 {
-    return (this->nickname);
+    return (this->_nickname);
 }
 
 std::string Contact::getNumber() const
 {
-    return (this->number);
+    return (this->_number);
 }
 
 int Contact::getIndex() const

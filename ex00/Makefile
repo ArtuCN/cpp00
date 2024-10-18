@@ -21,7 +21,7 @@ $(NAME) : $(OBJ)
 		@ echo $(CYAN)          "\____/ |_|   |_|  "$(NONE)
 		@ echo $(FUCHSIA)       "                   "$(NONE)
 			
-	rm -rf $(OBJ)
+	@rm -rf $(OBJ)
 
 all	: $(NAME)
 

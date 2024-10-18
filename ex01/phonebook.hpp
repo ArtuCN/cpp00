@@ -17,9 +17,9 @@ class Phone_book
         void search();
         void exit();
     private:
-        Contact contacts[LIMIT];
-        static std::string truncateName(const std::string& name);
-        uint8_t num;
+        Contact _contacts[LIMIT];
+        static std::string _truncateName(const std::string& name);
+        uint8_t _num;
 };
 
 #endif

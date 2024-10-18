@@ -6,7 +6,7 @@
 /*   By: aconti <aconti@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/29 16:35:18 by artucn            #+#    #+#             */
-/*   Updated: 2024/07/05 11:29:43 by aconti           ###   ########.fr       */
+/*   Updated: 2024/10/18 11:29:08 by aconti           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 Phone_book::Phone_book()
 {
-   this->num = 0;
+   this->_num = 0;
 }
 
-std::string Phone_book::truncateName(const std::string& name)
+std::string Phone_book::_truncateName(const std::string& name)
 {
     if (name.length() > 9)
     {
@@ -30,26 +30,26 @@ void Phone_book::add()
 {
     static int flag = -1;
     std:: string firstName, lastName, nickname, number;
-    if (num >= LIMIT || flag != -1)
+    if (_num >= LIMIT || flag != -1)
     {
         flag++;
         std::cout << "First name: ";
         std::cin >> firstName;
-        contacts[flag].setFirstName(truncateName(firstName));
+        _contacts[flag].setFirstName(_truncateName(firstName));
         
         std::cout << "Last name: ";
         std::cin >> lastName;
-        contacts[flag].setLastName(truncateName(lastName));
+        _contacts[flag].setLastName(_truncateName(lastName));
 
         std::cout << "Nickname: ";
         std::cin >> nickname;
-        contacts[flag].setNickname(truncateName(nickname));
+        _contacts[flag].setNickname(_truncateName(nickname));
 
         std::cout << "Number: ";
         std::cin >> number;
-        contacts[flag].setNumber(truncateName(number));
+        _contacts[flag].setNumber(_truncateName(number));
 
-        contacts[flag].setIndex(flag);
+        _contacts[flag].setIndex(flag);
         if (flag == LIMIT - 1)
             flag = -1;
     }
@@ -57,22 +57,22 @@ void Phone_book::add()
     {    
         std::cout << "First name: ";
         std::cin >> firstName;
-        contacts[num].setFirstName(truncateName(firstName));
+        _contacts[_num].setFirstName(_truncateName(firstName));
     
         std::cout << "Last name: ";
         std::cin >> lastName;
-        contacts[num].setLastName(truncateName(lastName));
+        _contacts[_num].setLastName(_truncateName(lastName));
 
         std::cout << "Nickname: ";
         std::cin >> nickname;
-        contacts[num].setNickname(truncateName(nickname));
+        _contacts[_num].setNickname(_truncateName(nickname));
 
         std::cout << "Number: ";
         std::cin >> number;
-        contacts[num].setNumber(truncateName(number));
+        _contacts[_num].setNumber(_truncateName(number));
 
-        contacts[num].setIndex(num);
-        num++;
+        _contacts[_num].setIndex(_num);
+        _num++;
     }
 }
 
@@ -89,24 +89,24 @@ void Phone_book::search()
     std::cout << "index     |first name|last name |nickname  |number    |\n";
     int index;
 
-    for (int i = 0; i < num; i++)
+    for (int i = 0; i < _num; i++)
     {
-        std::cout << std::setw(10) << std::right <<static_cast<unsigned int>(contacts[i].getIndex()) << "|";
-        std::cout << std::setw(10) << std::right << contacts[i].getFirstName() << "|";
-        std::cout << std::setw(10) << std::right << contacts[i].getLastName() << "|";
-        std::cout << std::setw(10) << std::right << contacts[i].getNickname() << "|";
-        std::cout << std::setw(10) << std::right << contacts[i].getNumber() << "|";
+        std::cout << std::setw(10) << std::right <<static_cast<unsigned int>(_contacts[i].getIndex()) << "|";
+        std::cout << std::setw(10) << std::right << _contacts[i].getFirstName() << "|";
+        std::cout << std::setw(10) << std::right << _contacts[i].getLastName() << "|";
+        std::cout << std::setw(10) << std::right << _contacts[i].getNickname() << "|";
+        std::cout << std::setw(10) << std::right << _contacts[i].getNumber() << "|";
         std::cout << std::endl;
     }
     std::cout<<"Enter the index of the contact you would like to see:"<<std::endl;
     std::cin>>index;
-    if (index < 0 || index >= num)
+    if (index < 0 || index >= _num)
     {
         std::cout<<"Invalid index"<<std::endl;
         return;
     }
     else
-        display(index, contacts);
+        display(index, _contacts);
 }
 
 void Phone_book::exit()
